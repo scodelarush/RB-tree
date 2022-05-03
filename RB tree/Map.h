@@ -9,8 +9,8 @@ class Map
 {
 public:
 	
-	Map(); //O(1)
-	~Map(); //O(n)
+	Map(); 
+	~Map(); 
 
 private:
 	template<typename T1,typename T2>
@@ -37,27 +37,27 @@ private:
 	std::list<T2> values;
 public:
 
-	void removeNode(Node<T1,T2>* temp); //O(n)
+	void removeNode(Node<T1,T2>* temp); 
 
-	void insert(typename T1, typename T2); //O(logn)
-	void balanceInsert(Node<T1,T2>* node); //O(logn)
+	void insert(typename T1, typename T2); 
+	void balanceInsert(Node<T1,T2>* node); 
 
-	void remove(typename T1); //O(logn) (не учитывая удаления элементов из списка, которое вроде как O(n))
-	void balanceRemove(Node<T1,T2>* node,bool side); //O(logn)
+	void remove(typename T1); 
+	void balanceRemove(Node<T1,T2>* node,bool side); 
 
-	void leftRotate(Node<T1, T2>* node); //O(1)
-	void rightRotate(Node<T1, T2>* node); //O(1)
+	void leftRotate(Node<T1, T2>* node); 
+	void rightRotate(Node<T1, T2>* node); 
 
-	int getSize(); //O(1)
-	Node<T1, T2>* getHead() const; //O(1)
+	int getSize(); 
+	Node<T1, T2>* getHead() const; 
 
-	T2 find(T1 key); //O(logn)
-	Node<T1, T2>* findNode(T1 key) const; //O(logn)
-	void clear(); //O(n)
+	T2 find(T1 key); 
+	Node<T1, T2>* findNode(T1 key) const; 
+	void clear(); 
 
-	std::list<T1> getKeys(); //O(1)
-	std::list<T2> getValues(); //O(1)
+	std::list<T1> getKeys(); 
+	std::list<T2> getValues(); 
 
-	void print(Node<T1, T2>* node); // O(n) 
-	void print(); //O(n)
+	void print(Node<T1, T2>* node);  
+	void print(); 
 };
